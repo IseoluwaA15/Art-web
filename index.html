@@ -7,22 +7,53 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
         body { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700;
-            background: linear-gradient(135deg, #f9d423 0%, #ff4e50 40%, #1e90ff 100%);
-            color: #222; margin: 0; padding: 0; min-height: 100vh; }
-        header { background: rgba(45,49,66,0.95); color: #fff; padding: 2.5rem 0 1.5rem 0; text-align: center; border-radius: 0 0 20px 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
-        main { max-width: 1000px; margin: 2.5rem auto; background: rgba(255,255,255,0.97); padding: 2.5rem 2rem; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); }
+            background: #2c1a09; color: #e9d8a6; margin: 0; padding: 0; }
+        header { background: #5a3a1b; color: #f6e7c1; padding: 2rem 0; text-align: center; }
+        main { max-width: 900px; margin: 2rem auto; background: #3e2723; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); }
+        h1, h2 { margin-top: 0; }
         h1 { font-size: 2.8rem; font-weight: 900; letter-spacing: 2px; margin-bottom: 0.5rem; }
         h2 { font-size: 2rem; font-weight: 900; margin-top: 0; margin-bottom: 0.5rem; }
-        .era { margin-bottom: 2.8rem; padding: 1.5rem 1rem; border-radius: 12px; background: linear-gradient(90deg, #f9d42322 0%, #ff4e5022 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
-        .era img { max-width: 220px; border-radius: 10px; margin: 0.5rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.10); flex: 1 1 220px; }
+        .era { margin-bottom: 2.5rem; }
+        .era img { max-width: 100%; border-radius: 8px; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
         .era-content { flex: 2 1 350px; min-width: 250px; }
-        .era-title { color: #2d3142; font-weight: 900; margin-bottom: 0.5rem; }
-        .era p, .era strong { font-size: 1.08rem; font-weight: 700; }
-        footer { text-align: center; color: #888; margin: 2.5rem 0 1.5rem 0; font-size: 1.05em; font-weight: 700; letter-spacing: 1px; }
+        .era-title { color: #ffd700; text-shadow: 1px 1px 4px #5a3a1b; margin-bottom: 0.5rem; }
+        footer { text-align: center; color: #bfa76a; margin: 2rem 0 1rem 0; font-size: 0.95em; }
+        .eras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        .era {
+            background: #4b2e05;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .era img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .era-title {
+            color: #ffd700;
+            text-shadow: 1px 1px 4px #5a3a1b;
+            margin-bottom: 0.5rem;
+        }
+        .era-content {
+            text-align: center;
+        }
         @media (max-width: 700px) {
-            main { padding: 1rem; }
-            .era { flex-direction: column; gap: 1rem; }
-            .era img { max-width: 100%; }
+            .eras-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .era {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -32,139 +63,171 @@
         <p>Explore the beauty and evolution of art across different eras</p>
     </header>
     <main>
-        <section class="era">
-            <h2 class="era-title">Prehistoric Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 40,000 BCE – 3,000 BCE)</span></h2>
-            <img src="Prehistoric Art.jpeg" alt="Prehistoric cave painting from local file">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/AltamiraBison.jpg" alt="Prehistoric cave painting">
-            <div class="era-content">
-                <p><strong>Timeline:</strong> c. 40,000 BCE – 3,000 BCE</p>
-                <p><strong>How and Why:</strong> Prehistoric art emerged as early humans sought to communicate, record events, and express beliefs about the world around them. The development of tools and pigments enabled the creation of cave paintings, carvings, and sculptures. Art served ritualistic, educational, and survival purposes, helping to pass down knowledge and beliefs before the advent of written language.</p>
-                <p>Prehistoric art includes cave paintings, carvings, and sculptures created by early humans. These works often depict animals and hunting scenes, reflecting the daily life and beliefs of ancient people.</p>
-                <p><strong>Key features:</strong> Use of natural pigments, simple tools, and symbolic imagery.<br>
-                <strong>Notable sites:</strong> Lascaux (France), Altamira (Spain), Chauvet Cave (France).<br>
-                <strong>Purpose:</strong> Ritualistic, storytelling, and communication of survival knowledge.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Classical Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 800 BCE – 500 CE)</span></h2>
-            <img src="Classical Art.jpeg" alt="Classical art from local file">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Parthenon-2008.jpg" alt="Classical Greek art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 800 BCE – 500 CE</p>
-            <p><strong>How and Why:</strong> Classical art arose in ancient Greece and Rome as societies became more organized and urbanized. The pursuit of harmony, proportion, and idealized beauty reflected philosophical and civic ideals. Advances in mathematics, philosophy, and politics influenced the development of realistic sculpture, architecture, and pottery, celebrating human achievement and the gods.</p>
-            <p>Classical art, from ancient Greece and Rome, is known for its focus on harmony, proportion, and idealized beauty. Sculpture and architecture flourished during this era. <br>
-            <strong>Key features:</strong> Realistic human forms, balanced compositions, and architectural marvels like temples and amphitheaters. <br>
-            <strong>Notable works:</strong> The Parthenon, Venus de Milo, Roman mosaics. <br>
-            <strong>Influence:</strong> Set the foundation for Western art and aesthetics.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Medieval Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 500 – 1400 CE)</span></h2>
-            <img src="Medieval Art.jpeg" alt="Medieval art from local file">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Notre_Dame_de_Paris_2013-07-24.jpg" alt="Medieval art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 500 – 1400 CE</p>
-            <p><strong>How and Why:</strong> Medieval art developed as Christianity spread across Europe, shaping cultural and artistic expression. Art became a tool for religious instruction and devotion, with churches and monasteries commissioning works to inspire faith. The era’s instability and focus on the afterlife led to symbolic, stylized forms rather than realism.</p>
-            <p>Medieval art was deeply influenced by religion, with illuminated manuscripts, stained glass, and grand cathedrals. Symbolism and spiritual themes were central to this period. <br>
-            <strong>Key features:</strong> Religious iconography, gold leaf, stylized figures, and intricate patterns. <br>
-            <strong>Notable works:</strong> Notre-Dame Cathedral, Book of Kells, Gothic stained glass. <br>
-            <strong>Purpose:</strong> To inspire devotion and teach biblical stories to largely illiterate populations.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Renaissance Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1400 – 1600 CE)</span></h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg" alt="Renaissance art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 1400 – 1600 CE</p>
-            <p><strong>How and Why:</strong> The Renaissance began in Italy as renewed interest in classical antiquity, science, and humanism flourished. Economic growth, the rise of wealthy patrons, and advances in perspective and anatomy led to a revolution in art. Artists sought to depict the natural world and human experience with unprecedented realism and emotion.</p>
-            <p>The Renaissance marked a rebirth of classical ideals, with artists like Leonardo da Vinci and Michelangelo creating masterpieces that emphasized realism, perspective, and human emotion. <br>
-            <strong>Key features:</strong> Linear perspective, anatomical accuracy, use of light and shadow (chiaroscuro). <br>
-            <strong>Notable works:</strong> Mona Lisa, The Last Supper, Sistine Chapel ceiling. <br>
-            <strong>Impact:</strong> Revolutionized art, science, and culture in Europe.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Baroque Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1600 – 1750 CE)</span></h2>
-            <img src="Baroque Art.jpeg" alt="Baroque art from local file">
-            <img src="Baroque Art 2.jpeg" alt="Additional Baroque art">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Rembrandt_-_The_Nightwatch_-_1642.jpg" alt="Baroque art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 1600 – 1750 CE</p>
-            <p><strong>How and Why:</strong> Baroque art emerged in response to the Catholic Church’s desire to inspire awe and devotion during the Counter-Reformation. Monarchies and religious institutions commissioned grand, emotional works to display power and faith. Advances in technique allowed for dramatic lighting, movement, and theatricality.</p>
-            <p>Baroque art is characterized by dramatic lighting, intense emotions, and grandeur. It often features dynamic compositions and rich detail. <br>
-            <strong>Key features:</strong> Dramatic contrasts of light and shadow (chiaroscuro), movement, and theatricality. <br>
-            <strong>Notable artists:</strong> Caravaggio, Rembrandt, Peter Paul Rubens. <br>
-            <strong>Purpose:</strong> To evoke emotion and awe, often in religious or royal contexts.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Romanticism <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1800 – 1850 CE)</span></h2>
-            <img src="Romanticism Art.jpeg" alt="Romanticism art">
-            <img src="Romanticism Art 2.jpeg" alt="Additional Romanticism art">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Eug%C3%A8ne_Delacroix_-_La_Libert%C3%A9_guidant_le_peuple.jpg" alt="Romanticism art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 1800 – 1850 CE</p>
-            <p><strong>How and Why:</strong> Romanticism arose as a reaction to the Industrial Revolution and the rationalism of the Enlightenment. Artists sought to express intense emotion, individuality, and the power of nature, often as a response to social and political upheaval.</p>
-            <p>Romanticism emphasized emotion, nature, and individualism, often as a reaction against industrialization and rationalism. <br>
-            <strong>Key features:</strong> Expressive brushwork, dramatic scenes, focus on nature and the sublime. <br>
-            <strong>Notable artists:</strong> Francisco Goya, Eugène Delacroix, J.M.W. Turner. <br>
-            <strong>Impact:</strong> Influenced literature, music, and visual arts across Europe.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Impressionism <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1860 – 1890 CE)</span></h2>
-            <img src="Imperssionism Art.jpeg" alt="Impressionism art from local file">
-            <img src="Imperssionism Art 2.jpeg" alt="Additional Impressionism art">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Claude_Monet%2C_Impression%2C_soleil_levant.jpg" alt="Impressionism art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 1860 – 1890 CE</p>
-            <p><strong>How and Why:</strong> Impressionism developed in France as artists began painting outdoors to capture the fleeting effects of light and atmosphere. The movement was a response to the rapid modernization of society and a rejection of academic art traditions.</p>
-            <p>Impressionism focused on capturing the fleeting effects of light and color in everyday scenes, often painted outdoors. <br>
-            <strong>Key features:</strong> Loose brushwork, vibrant colors, depiction of modern life. <br>
-            <strong>Notable artists:</strong> Claude Monet, Edgar Degas, Pierre-Auguste Renoir. <br>
-            <strong>Legacy:</strong> Paved the way for modern art movements.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Modern Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1890 – 1970 CE)</span></h2>
-            <img src="Modern Art.jpeg" alt="Modern art from local file">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Picasso_Three_Musicians_1921.jpg" alt="Modern art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 1890 – 1970 CE</p>
-            <p><strong>How and Why:</strong> Modern art emerged as artists sought to break away from tradition and experiment with new forms, techniques, and ideas. The era was shaped by rapid social, technological, and political changes, leading to movements like Cubism, Surrealism, and Abstract art.</p>
-            <p>Modern art broke away from tradition, embracing new styles and ideas. Movements like Impressionism, Cubism, and Surrealism challenged the boundaries of artistic expression. <br>
-            <strong>Key features:</strong> Experimentation with color, form, and technique; abstraction; focus on individual perspective. <br>
-            <strong>Notable artists:</strong> Claude Monet, Pablo Picasso, Salvador Dalí. <br>
-            <strong>Movements:</strong> Impressionism, Expressionism, Cubism, Surrealism, Abstract art.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Postmodern Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1970 – 2000 CE)</span></h2>
-            <img src="Postmodern Art.jpeg" alt="Postmodern art from local file">
-            <img src="Postmodern Art 2.jpeg" alt="Additional Postmodern art">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Jeff_Koons_Puppy_Bilbao_2016.jpg" alt="Postmodern art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> c. 1970 – 2000 CE</p>
-            <p><strong>How and Why:</strong> Postmodern art arose as a reaction to the perceived limitations of Modernism. Artists embraced pluralism, irony, and the mixing of styles, questioning the very nature of art and originality in a rapidly globalizing world.</p>
-            <p>Postmodern art is eclectic, playful, and often challenges traditional boundaries. It incorporates irony, pastiche, and a mix of styles and media. <br>
-            <strong>Key features:</strong> Appropriation, irony, mixing of high and low culture, and questioning of originality. <br>
-            <strong>Notable artists:</strong> Jeff Koons, Cindy Sherman, Jean-Michel Basquiat. <br>
-            <strong>Trends:</strong> Installation art, conceptual art, and multimedia experimentation.</p>
-            </div>
-        </section>
-        <section class="era">
-            <h2 class="era-title">Contemporary Art <span style='font-size:1rem;font-weight:700;color:#888;'>(2000 CE – Present)</span></h2>
-            <img src="contemporary Art.jpeg" alt="Contemporary art from local file">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Banksy_-_Shop_Until_You_Drop.jpg" alt="Contemporary art">
-            <div class="era-content">
-            <p><strong>Timeline:</strong> 2000 CE – Present</p>
-            <p><strong>How and Why:</strong> Contemporary art reflects the complexities of the modern world, shaped by globalization, technology, and diverse cultural perspectives. Artists use new media and address current social, political, and environmental issues, often blurring the boundaries between art, life, and technology.</p>
-            <p>Contemporary art is diverse and dynamic, incorporating new media, technology, and addressing global issues. It often challenges viewers' perceptions and engages with the complexities of modern life. <br>
-            <strong>Key features:</strong> Use of new media and technology, engagement with social and political issues, and a focus on global perspectives. <br>
-            <strong>Notable artists:</strong> Banksy, Ai Weiwei, Yayoi Kusama. <br>
-            <strong>Current trends:</strong> Street art, digital art, installation art, and performance art.</p>
-            </div>
-        </section>
+        <nav style="background:#7c5e2c; padding:1rem; border-radius:8px; margin-bottom:2rem; text-align:center;">
+            <a href="#prehistoric-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Prehistoric</a>
+            <a href="#classical-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Classical</a>
+            <a href="#medieval-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Medieval</a>
+            <a href="#renaissance-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Renaissance</a>
+            <a href="#baroque-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Baroque</a>
+            <a href="#neoclassicism-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Neoclassicism</a>
+            <a href="#romanticism-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Romanticism</a>
+            <a href="#realism-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Realism</a>
+            <a href="#impressionism-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Impressionism</a>
+            <a href="#post-impressionism-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Post-Impressionism</a>
+            <a href="#modern-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Modern</a>
+            <a href="#contemporary-art" style="color:#ffd700; margin:0 1rem; text-decoration:none; font-weight:bold;">Contemporary</a>
+        </nav>
+        <div class="eras-grid">
+            <section class="era" id="prehistoric-art">
+                <h2 class="era-title">Prehistoric Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 40,000 BCE – 3,000 BCE)</span></h2>
+                <img src="images/Prehistoric Art.jpeg" alt="Prehistoric cave painting from local file">
+                <img src="images/Prehistoric art 2.jpeg" alt="Additional Prehistoric Art example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/AltamiraBison.jpg" alt="Prehistoric cave painting">
+                <div class="era-content">
+                    <p><strong>Timeline:</strong> c. 40,000 BCE – 3,000 BCE</p>
+                    <p><strong>How and Why:</strong> Prehistoric art emerged as early humans sought to communicate, record events, and express beliefs about the world around them. The development of tools and pigments enabled the creation of cave paintings, carvings, and sculptures. Art served ritualistic, educational, and survival purposes, helping to pass down knowledge and beliefs before the advent of written language.</p>
+                    <p>Prehistoric art includes cave paintings, carvings, and sculptures created by early humans. These works often depict animals and hunting scenes, reflecting the daily life and beliefs of ancient people.</p>
+                    <p><strong>Key features:</strong> Use of natural pigments, simple tools, and symbolic imagery.<br>
+                    <strong>Notable sites:</strong> Lascaux (France), Altamira (Spain), Chauvet Cave (France).<br>
+                    <strong>Purpose:</strong> Ritualistic, storytelling, and communication of survival knowledge.</p>
+                </div>
+                <h3>Famous Artist: The Artists of Lascaux</h3>
+                <p><strong>How they became famous:</strong> The creators of the Lascaux cave paintings in France remain anonymous, but their work is world-renowned for its beauty and sophistication. These artists became famous thousands of years later when their caves were discovered in 1940, revealing the extraordinary talent and creativity of prehistoric humans.</p>
+            </section>
+            <section class="era" id="classical-art">
+                <h2 class="era-title">Classical Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 800 BCE – 500 CE)</span></h2>
+                <img src="images/Classical Art.jpeg" alt="Classical art from local file">
+                <img src="images/classical art 2.jpeg" alt="Additional Classical Art example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Parthenon-2008.jpg" alt="Classical Greek art">
+                <div class="era-content">
+                <p><strong>Timeline:</strong> c. 800 BCE – 500 CE</p>
+                <p><strong>How and Why:</strong> Classical art arose in ancient Greece and Rome as societies became more organized and urbanized. The pursuit of harmony, proportion, and idealized beauty reflected philosophical and civic ideals. Advances in mathematics, philosophy, and politics influenced the development of realistic sculpture, architecture, and pottery, celebrating human achievement and the gods.</p>
+                <p>Classical art, from ancient Greece and Rome, is known for its focus on harmony, proportion, and idealized beauty. Sculpture and architecture flourished during this era. <br>
+                <strong>Key features:</strong> Realistic human forms, balanced compositions, and architectural marvels like temples and amphitheaters. <br>
+                <strong>Notable works:</strong> The Parthenon, Venus de Milo, Roman mosaics. <br>
+                <strong>Influence:</strong> Set the foundation for Western art and aesthetics.</p>
+                </div>
+                <h3>Famous Artist: Phidias</h3>
+                <p><strong>How he became famous:</strong> Phidias was a Greek sculptor, painter, and architect, celebrated for his statues of Zeus at Olympia and Athena at the Parthenon. His fame grew from his mastery of proportion and his role in creating monumental works for important temples, making him a legend in the ancient world.</p>
+            </section>
+            <section class="era" id="medieval-art">
+                <h2 class="era-title">Medieval Art</h2>
+                <img src="images/Medieval Art.jpeg" alt="Medieval Art example">
+                <img src="images/medieval art 2.jpeg" alt="Additional Medieval Art example">
+                <div class="era-content">
+                    <p>Medieval art (5th–15th centuries) was deeply influenced by religion, with illuminated manuscripts, stained glass, and grand cathedrals. Symbolism and spiritual themes were central to this period.</p>
+                    <strong>Famous Artist: Giotto di Bondone</strong>
+                    <p>Giotto revolutionized medieval painting by introducing more naturalistic figures and three-dimensional space. His frescoes in the Scrovegni Chapel brought him widespread acclaim and set the stage for the Renaissance.</p>
+                </div>
+            </section>
+            <section class="era" id="renaissance-art">
+                <h2 class="era-title">Renaissance Art</h2>
+                <img src="images/renaissance art 2.jpeg" alt="Additional Renaissance Art example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg" alt="Renaissance Art example">
+                <div class="era-content">
+                    <p>The Renaissance (14th–17th centuries) marked a revival of classical learning and wisdom after the Middle Ages. Artists focused on realism, perspective, and human anatomy.</p>
+                    <strong>Famous Artist: Leonardo da Vinci</strong>
+                    <p>Leonardo became famous for masterpieces like the Mona Lisa and The Last Supper, blending science and art to achieve lifelike detail and innovative techniques.</p>
+                </div>
+            </section>
+            <section class="era" id="baroque-art">
+                <h2 class="era-title">Baroque Art</h2>
+                <img src="images/Baroque Art.jpeg" alt="Baroque Art example">
+                <img src="images/Baroque Art 2.jpeg" alt="Baroque Art second example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Caravaggio_-_The_Calling_of_Saint_Matthew.jpg" alt="Caravaggio - The Calling of Saint Matthew">
+                <div class="era-content">
+                    <p>The Baroque era (17th–18th centuries) is known for its dramatic use of light, rich colors, and emotional intensity. Artworks often depicted religious themes and grandeur.</p>
+                    <strong>Famous Artist: Caravaggio</strong>
+                    <p>Caravaggio became famous for his realistic observation of the human state and his dramatic use of lighting, influencing generations of artists.</p>
+                </div>
+            </section>
+            <section class="era" id="neoclassicism-art">
+                <h2 class="era-title">Neoclassicism Art</h2>
+                <img src="images/Neoclassicism art.jpeg" alt="Neoclassicism Art example">
+                <img src="images/Neoclassicism art 2.jpeg" alt="Neoclassicism Art second example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg" alt="Oath of the Horatii by Jacques-Louis David">
+                <p>Neoclassicism art drew inspiration from classical antiquity, emphasizing simplicity, symmetry, and moral virtue, and was popular in the late 18th and early 19th centuries.</p>
+                <h3>Famous Artist: Jacques-Louis David</h3>
+                <p><strong>How he became famous:</strong> David became famous for his dramatic historical paintings and his role as the leading artist of the French Revolution, influencing art and politics alike.</p>
+            </section>
+            <section class="era" id="romanticism-art">
+                <h2 class="era-title">Romanticism <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1800 – 1850 CE)</span></h2>
+                <img src="Romanticism Art.jpeg" alt="Romanticism art">
+                <img src="Romanticism Art 2.jpeg" alt="Additional Romanticism art">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Eug%C3%A8ne_Delacroix_-_La_Libert%C3%A9_guidant_le_peuple.jpg" alt="Romanticism art">
+                <div class="era-content">
+                <p><strong>Timeline:</strong> c. 1800 – 1850 CE</p>
+                <p><strong>How and Why:</strong> Romanticism arose as a reaction to the Industrial Revolution and the rationalism of the Enlightenment. Artists sought to express intense emotion, individuality, and the power of nature, often as a response to social and political upheaval.</p>
+                <p>Romanticism emphasized emotion, nature, and individualism, often as a reaction against industrialization and rationalism. <br>
+                <strong>Key features:</strong> Expressive brushwork, dramatic scenes, focus on nature and the sublime. <br>
+                <strong>Notable artists:</strong> Francisco Goya, Eugène Delacroix, J.M.W. Turner. <br>
+                <strong>Impact:</strong> Influenced literature, music, and visual arts across Europe.</p>
+                </div>
+            </section>
+            <section class="era" id="realism-art">
+                <h2 class="era-title">Realism Art</h2>
+                <img src="images/Realism art.jpeg" alt="Realism Art example">
+                <img src="images/Realism art 2.jpeg" alt="Realism Art second example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Courbet_The_Stone_Breakers.jpg" alt="The Stone Breakers by Gustave Courbet">
+                <p>Realism art emerged in the mid-19th century, focusing on depicting everyday life and ordinary people with truth and accuracy, rejecting idealization.</p>
+                <h3>Famous Artist: Gustave Courbet</h3>
+                <p><strong>How he became famous:</strong> Courbet became famous for his bold, honest depictions of working-class people and rural scenes, challenging academic art traditions and inspiring future generations of artists.</p>
+            </section>
+            <section class="era" id="impressionism-art">
+                <h2 class="era-title">Impressionism <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1860 – 1890 CE)</span></h2>
+                <img src="Imperssionism Art.jpeg" alt="Impressionism art from local file">
+                <img src="Imperssionism Art 2.jpeg" alt="Additional Impressionism art">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Claude_Monet%2C_Impression%2C_soleil_levant.jpg" alt="Impressionism art">
+                <div class="era-content">
+                <p><strong>Timeline:</strong> c. 1860 – 1890 CE</p>
+                <p><strong>How and Why:</strong> Impressionism developed in France as artists began painting outdoors to capture the fleeting effects of light and atmosphere. The movement was a response to the rapid modernization of society and a rejection of academic art traditions.</p>
+                <p>Impressionism focused on capturing the fleeting effects of light and color in everyday scenes, often painted outdoors. <br>
+                <strong>Key features:</strong> Loose brushwork, vibrant colors, depiction of modern life. <br>
+                <strong>Notable artists:</strong> Claude Monet, Edgar Degas, Pierre-Auguste Renoir. <br>
+                <strong>Legacy:</strong> Paved the way for modern art movements.</p>
+                </div>
+            </section>
+            <section class="era" id="post-impressionism-art">
+                <h2 class="era-title">Post-Impressionism Art</h2>
+                <img src="images/Post-impressionism art.jpeg" alt="Post-Impressionism Art example">
+                <img src="images/Post-impressionism art 2.jpeg" alt="Post-Impressionism Art second example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Vincent_Willem_van_Gogh_128.jpg" alt="Starry Night by Vincent van Gogh">
+                <p>Post-Impressionism developed as a reaction against Impressionism, with artists exploring new ways to express emotion, structure, and symbolism in their work.</p>
+                <h3>Famous Artist: Vincent van Gogh</h3>
+                <p><strong>How he became famous:</strong> Van Gogh became famous posthumously for his expressive use of color and brushwork, creating iconic works that deeply influenced modern art.</p>
+            </section>
+            <section class="era" id="modern-art">
+                <h2 class="era-title">Modern Art <span style='font-size:1rem;font-weight:700;color:#888;'>(c. 1890 – 1970 CE)</span></h2>
+                <img src="images/Modern Art.jpeg" alt="Modern art from local file">
+                <img src="images/modern art 2.jpeg" alt="Additional Modern Art example">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Picasso_Three_Musicians_1921.jpg" alt="Modern art">
+                <div class="era-content">
+                <p><strong>Timeline:</strong> c. 1890 – 1970 CE</p>
+                <p><strong>How and Why:</strong> Modern art emerged as artists sought to break away from tradition and experiment with new forms, techniques, and ideas. The era was shaped by rapid social, technological, and political changes, leading to movements like Cubism, Surrealism, and Abstract art.</p>
+                <p>Modern art broke away from tradition, embracing new styles and ideas. Movements like Impressionism, Cubism, and Surrealism challenged the boundaries of artistic expression. <br>
+                <strong>Key features:</strong> Experimentation with color, form, and technique; abstraction; focus on individual perspective. <br>
+                <strong>Notable artists:</strong> Claude Monet, Pablo Picasso, Salvador Dalí. <br>
+                <strong>Movements:</strong> Impressionism, Expressionism, Cubism, Surrealism, Abstract art.</p>
+                </div>
+                <h3>Famous Artist: Pablo Picasso</h3>
+                <p><strong>How he became famous:</strong> Picasso became famous for pioneering Cubism and for his prolific output in painting, sculpture, and ceramics. His innovative style and ability to reinvent himself made him one of the most influential artists of the 20th century.</p>
+            </section>
+            <section class="era" id="contemporary-art">
+                <h2 class="era-title">Contemporary Art <span style='font-size:1rem;font-weight:700;color:#888;'>(2000 CE – Present)</span></h2>
+                <img src="images/contemporary Art.jpeg" alt="Contemporary art from local file">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Banksy_-_Shop_Until_You_Drop.jpg" alt="Contemporary art">
+                <div class="era-content">
+                <p><strong>Timeline:</strong> 2000 CE – Present</p>
+                <p><strong>How and Why:</strong> Contemporary art reflects the complexities of the modern world, shaped by globalization, technology, and diverse cultural perspectives. Artists use new media and address current social, political, and environmental issues, often blurring the boundaries between art, life, and technology.</p>
+                <p>Contemporary art is diverse and dynamic, incorporating new media, technology, and addressing global issues. It often challenges viewers' perceptions and engages with the complexities of modern life. <br>
+                <strong>Key features:</strong> Use of new media and technology, engagement with social and political issues, and a focus on global perspectives. <br>
+                <strong>Notable artists:</strong> Banksy, Ai Weiwei, Yayoi Kusama. <br>
+                <strong>Current trends:</strong> Street art, digital art, installation art, and performance art.</p>
+                </div>
+                <h3>Famous Artist: Banksy</h3>
+                <p><strong>How they became famous:</strong> Banksy is an anonymous street artist known for provocative and politically charged works. Gaining fame through graffiti in public spaces, Banksy's art has sparked global conversations and achieved high value in the art market.</p>
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Art Through the Ages. All rights reserved.</p>
